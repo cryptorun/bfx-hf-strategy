@@ -19,7 +19,6 @@
     "unit": "NODE_ENV=test istanbul cover _mocha -- -R spec -b --recursive",
     "test-without-coverage": "NODE_ENV=test mocha -R spec -b --recursive",
     "build": "babel -q ./index.js -d ./dist && babel -q ./lib -d ./dist/lib && copy package.json dist",
-    "postinstall": "npm run build",
     "api_docs": "node_modules/jsdoc-to-markdown/bin/cli.js lib/define.js lib/data/*.js lib/indicators/*.js lib/position/*.js lib/updates/*.js > docs/api.md",
     "docs": "npm run api_docs"
   },
